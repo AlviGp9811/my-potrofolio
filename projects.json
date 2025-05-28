@@ -23,30 +23,5 @@
     "image": "img/apache-server.png",
     "link": "#"
 
-  },
-  {
-    "id": "vlan",
-    "title": "Konfigurasi Mikrotik VLAN",
-    "description": "Membuat VLAN untuk isolasi antar divisi di perusahaan menggunakan Mikrotik.",
-    "image": "images/vlan.png"
-  },
-  {
-    "id": "ospf",
-    "title": "Simulasi Routing OSPF",
-    "description": "Simulasi routing OSPF menggunakan Cisco Packet Tracer untuk belajar dynamic routing.",
-    "image": "images/ospf.png"
-  },
-{
-  "id": "ospf",
-    "title": "Simulasi Routing OSPF",
-    "description": "Simulasi routing OSPF menggunakan Cisco Packet Tracer untuk belajar dynamic routing.",
-    "image": "images/ospf.png"
-},
-  {
-  "id": "bgrp",
-    "title": "Simulasi Routing bgrp",
-    "description": "Simulasi routing BGRP menggunakan Cisco Packet Tracer untuk belajar dynamic routing.",
-    "image": "images/ospf.png"
-    
 }
 ]
