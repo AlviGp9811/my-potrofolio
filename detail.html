@@ -4,32 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Detail Proyek</title>
-  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .project-image { width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+    .not-found { color: red; text-align: center; }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <a href="index.html">← Kembali</a>
-    <h1 id="projectTitle"></h1>
-    <img id="projectImage" src="" alt="Project Image" style="max-width: 100%; margin-top: 20px; border-radius: 8px;" />
-    <p id="projectDescription" style="margin-top: 20px;"></p>
+  <div class="container" id="project-container">
+    <p>Loading...</p>
   </div>
 
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const projectId = urlParams.get('id');
+    async function loadProject() {
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get("id");
 
-    fetch('projects-id.json')
-      .then(response => response.json())
-      .then(data => {
-        const project = data.find(p => p.id === projectId);
-        if (project) {
-          document.getElementById('projectTitle').textContent = project.title;
-          document.getElementById('projectDescription').textContent = project.description;
-          document.getElementById('projectImage').src = project.image;
-        } else {
-          document.body.innerHTML = '<p>Proyek tidak ditemukan.</p>';
-        }
-      });
+      const response = await fetch("projects.json");
+      const projects = await response.json();
+
+      const project = projects.find(p => p.id === projectId);
+      const container = document.getElementById("project-container");
+
+      if (!project) {
+        container.innerHTML = "<p class='not-found'>Proyek tidak ditemukan.</p>";
+        return;
+      }
+
+      container.innerHTML = `
+        <h2>${project.title}</h2>
+        <img src="${project.image}" class="project-image" alt="${project.title}" />
+        <p>${project.description}</p>
+      `;
+    }
+
+    loadProject();
   </script>
 </body>
 </html>
+
