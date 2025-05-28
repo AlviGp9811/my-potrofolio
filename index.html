@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav> <!-- index bar nav -->
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Foto Profil -->
+    <div class="profile-photo-container" data-aos="zoom-in">
+      <img src="E:\file bang alpin\Alvi Portofolio\img\Foto Profil.png" alt="Your Photo" class="profile-photo" />
+    </div>
+
+    <!-- Intro -->
+    <section class="intro-text" data-aos="fade-up">
+      <h1>Hello, I'm <span class="highlight">Alvi Garaali P</span></h1>
+      <p>I have professional experience working in server and storage fields.</p>
+      <p>Currently, I am learning and exploring networking technologies.</p>
+      <p>My passion lies in the design, configuration, and optimization of IT infrastructure.</p>
+    </section>
+
+    <!-- Project Section -->
+    <section class="projects-section" data-aos="fade-up">
+    <!-- Project card h2 -->  
+      <h2>Latest Projects</h2>
+      <!-- Project card h3 -->
+      <div class="project-card">
+        <h3><a href="#">Konfigurasi Mikrotik VLAN</a></h3>
+        <p>Membuat VLAN untuk isolasi antar divisi di perusahaan menggunakan Mikrotik.</p>
+        <a href="#">Lihat Proyek</a>
+      </div>
+      <!-- Project card h4 -->
+      <div class="project-card">
+        <h3><a href="#">Simulasi Routing OSPF</a></h3>
+        <p>Simulasi konfigurasi routing OSPF menggunakan Cisco Packet Tracer.</p>
+        <a href="#">Lihat Proyek</a>
+      </div>
+      <div class="project-card">
+        <h3><a href="#">Monitoring Jaringan dengan Zabbix</a></h3>
+        <p>Implementasi sistem monitoring jaringan menggunakan Zabbix di server Ubuntu.</p>
+        <a href="#">Lihat Proyek</a>
+      </div>
+    </section>
+
+    <!-- Contact Link -->
+    <section class="contact-link" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <p>Silakan menuju halaman <a href="contact.html">Contact</a> untuk informasi lebih lanjut.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alvi Garaali P . All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

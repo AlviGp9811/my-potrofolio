@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Konfigurasi IP Static di Windows",
+    "description": "Menetapkan IP Address statis untuk koneksi LAN di Windows menggunakan Control Panel.",
+    "image": "img/ip-static-windows.png",
+    "link": "#"
+  },
+  {
+    "title": "Simulasi Jaringan LAN Sederhana",
+    "description": "Membangun topologi LAN menggunakan Cisco Packet Tracer antara 3 PC dan 1 Switch.",
+    "image": "img/lan-topology.png",
+    "link": "#"
+  },
+  {
+    "title": "Installasi FTP Server di Linux Ubuntu",
+    "description": "Menginstal dan mengkonfigurasi vsftpd untuk layanan FTP sederhana pada server Ubuntu.",
+    "image": "img/ftp-ubuntu.png",
+    "link": "#"
+  },
+  {
+    "title": "Setup Web Server Apache",
+    "description": "Konfigurasi dasar Apache di Ubuntu dan testing akses dari jaringan lokal.",
+    "image": "img/apache-server.png",
+    "link": "#"
+
+  }
+]
