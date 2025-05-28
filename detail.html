@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail Proyek</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html">← Kembali</a>
+    <h1 id="projectTitle"></h1>
+    <img id="projectImage" src="" alt="Project Image" style="max-width: 100%; margin-top: 20px; border-radius: 8px;" />
+    <p id="projectDescription" style="margin-top: 20px;"></p>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
+
+    fetch('data/projects.json')
+      .then(response => response.json())
+      .then(data => {
+        const project = data.find(p => p.id === projectId);
+        if (project) {
+          document.getElementById('projectTitle').textContent = project.title;
+          document.getElementById('projectDescription').textContent = project.description;
+          document.getElementById('projectImage').src = project.image;
+        } else {
+          document.body.innerHTML = '<p>Proyek tidak ditemukan.</p>';
+        }
+      });
+  </script>
+</body>
+</html>
