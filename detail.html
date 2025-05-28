@@ -18,7 +18,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
 
-    fetch('projects.json')
+    fetch('projects-id.json')
       .then(response => response.json())
       .then(data => {
         const project = data.find(p => p.id === projectId);
