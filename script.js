@@ -22,3 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Gagal memuat proyek:", error);
     });
 });
+
+card.innerHTML = `
+  <h3>${project.title}</h3>
+  <p>${project.description}</p>
+  <a href="detail.html?id=${project.id}" class="btn">Lihat Proyek</a>
+`;
+    });
+});
