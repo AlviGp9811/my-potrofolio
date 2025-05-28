@@ -176,6 +176,25 @@ header {
   margin-top: 30px;
 }
 
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.container a {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #003cff;
+}
+
+.container h1 {
+  font-size: 2rem;
+  color: #222;
+}
+
 /*project section style untuk text Halaman utama  */
 .project-card {
   background: #ffffff;
